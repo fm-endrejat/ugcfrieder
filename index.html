@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Online-Shop</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #6b4f2a; /* kackbraun */
+            color: #ffffff;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background-color: #5a3f1f;
+        }
+
+        .container {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: #7a5a33;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .product h3 {
+            margin-top: 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #2e7d32;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1b5e20;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #5a3f1f;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Adult Online-Shop</h1>
+    <p>Diskret · Einfach · Modern</p>
+</header>
+
+<div class="container">
+    <h2>Produkte</h2>
+
+    <div class="products">
+        <div class="product">
+            <h3>Produkt A</h3>
+            <p>Hochwertiges Produkt für Erwachsene.</p>
+            <button>In den Warenkorb</button>
+        </div>
+
+        <div class="product">
+            <h3>Produkt B</h3>
+            <p>Schlichtes Design, einfache Anwendung.</p>
+            <button>In den Warenkorb</button>
+        </div>
+
+        <div class="product">
+            <h3>Produkt C</h3>
+            <p>Beliebter Klassiker.</p>
+            <button>In den Warenkorb</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 · Demo-Shop · Keine echte Verkaufsfunktion
+</footer>
+
+</body>
+</html>
