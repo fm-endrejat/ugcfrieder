@@ -2,97 +2,232 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Online-Shop</title>
+    <title>UGC Portfolio – Frieder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #6b4f2a; /* kackbraun */
-            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #111;
+            color: #f2f2f2;
+            line-height: 1.6;
         }
 
         header {
-            padding: 20px;
+            padding: 80px 20px;
             text-align: center;
-            background-color: #5a3f1f;
+            background: linear-gradient(135deg, #1c1c1c, #000);
         }
 
-        .container {
-            padding: 30px;
-            max-width: 1000px;
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 700px;
             margin: 0 auto;
         }
 
-        .products {
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 5px solid #4caf50;
+            padding-left: 15px;
+        }
+
+        /* About */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 10px;
+            background: #333;
+        }
+
+        /* Video grid */
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
         }
 
-        .product {
-            background-color: #7a5a33;
-            padding: 20px;
+        .card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card video,
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #333;
+        }
+
+        .card .content {
+            padding: 15px;
+        }
+
+        /* Brands */
+        .brands {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            text-align: center;
+        }
+
+        .brand {
+            background-color: #1a1a1a;
+            padding: 30px;
             border-radius: 8px;
+            font-weight: bold;
+            color: #ccc;
         }
 
-        .product h3 {
-            margin-top: 0;
+        /* CTA */
+        .cta {
+            text-align: center;
+            background-color: #000;
+            padding: 80px 20px;
         }
 
-        button {
-            padding: 10px 15px;
+        .cta h2 {
             border: none;
-            border-radius: 5px;
-            background-color: #2e7d32;
-            color: white;
-            cursor: pointer;
+            padding: 0;
         }
 
-        button:hover {
-            background-color: #1b5e20;
+        .cta a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #4caf50;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
         }
 
         footer {
             text-align: center;
-            padding: 15px;
-            background-color: #5a3f1f;
-            font-size: 0.9em;
+            padding: 30px;
+            background-color: #0a0a0a;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 800px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Adult Online-Shop</h1>
-    <p>Diskret · Einfach · Modern</p>
+    <h1>UGC Creator Portfolio</h1>
+    <p>
+        Authentischer Video-Content für Performance-Marketing auf
+        TikTok, Instagram, YouTube & Meta Ads.
+    </p>
 </header>
 
-<div class="container">
-    <h2>Produkte</h2>
-
-    <div class="products">
-        <div class="product">
-            <h3>Produkt A</h3>
-            <p>Hochwertiges Produkt für Erwachsene.</p>
-            <button>In den Warenkorb</button>
+<section>
+    <h2>Über mich</h2>
+    <div class="about">
+        <div>
+            <p>
+                Ich bin UGC-Creator mit Fokus auf klare, glaubwürdige und
+                conversion-starke Inhalte. Mein Stil ist direkt, reduziert
+                und markenorientiert – ohne übertriebene Inszenierung.
+            </p>
+            <p>
+                Ideal für Brands, die echte Menschen statt klassischer Werbung
+                zeigen wollen.
+            </p>
         </div>
+        <img src="https://via.placeholder.com/500x400" alt="Creator Portrait Platzhalter">
+    </div>
+</section>
 
-        <div class="product">
-            <h3>Produkt B</h3>
-            <p>Schlichtes Design, einfache Anwendung.</p>
-            <button>In den Warenkorb</button>
+<section>
+    <h2>UGC Videos</h2>
+    <div class="grid">
+        <div class="card">
+            <video></video>
+            <div class="content">UGC Video – Produkt Review</div>
         </div>
-
-        <div class="product">
-            <h3>Produkt C</h3>
-            <p>Beliebter Klassiker.</p>
-            <button>In den Warenkorb</button>
+        <div class="card">
+            <video></video>
+            <div class="content">UGC Video – Ad Hook</div>
+        </div>
+        <div class="card">
+            <video></video>
+            <div class="content">UGC Video – Testimonial</div>
+        </div>
+        <div class="card">
+            <video></video>
+            <div class="content">UGC Video – Storytelling</div>
         </div>
     </div>
-</div>
+</section>
+
+<section>
+    <h2>Fotos</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="content">Lifestyle Shot</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="content">Produkt in Hand</div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/400x300" alt="">
+            <div class="content">Detailaufnahme</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Brands (Beispiele)</h2>
+    <div class="brands">
+        <div class="brand">Brand A</div>
+        <div class="brand">Brand B</div>
+        <div class="brand">Brand C</div>
+        <div class="brand">Brand D</div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Let’s work together</h2>
+    <p>UGC für Ads, Organic Content oder Landingpages.</p>
+    <a href="mailto:kontakt@beispiel.de">Kontakt aufnehmen</a>
+</section>
 
 <footer>
-    © 2026 · Demo-Shop · Keine echte Verkaufsfunktion
+    © 2026 · UGC Creator Portfolio · Demo
 </footer>
 
 </body>
